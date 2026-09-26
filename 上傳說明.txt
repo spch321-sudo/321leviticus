@@ -1,31 +1,33 @@
-GitHub Pages 上傳說明
-=====================
+GitHub Pages 上傳說明（扁平版）
+==============================
 
-這個 zip 解開之後，裡面的**每一個檔案與 icons 資料夾**都要放進 repo，
-而且 index.html 必須跟 icons 資料夾在**同一層**。
+這一版**沒有 icons 資料夾**，所有圖示都直接放在根目錄，
+就是為了避免網頁版上傳資料夾時把檔案攤平、路徑對不上。
 
-正確的樣子（repo 根目錄）：
+解開之後，把裡面**全部的檔**放進 repo 根目錄，跟 index.html 同一層：
+
     index.html
     manifest.webmanifest
     sw.js
     favicon.ico
+    icon-32.png  icon-64.png  icon-120.png  icon-152.png
+    icon-167.png icon-180.png icon-192.png icon-512.png  icon-1024.png
     .nojekyll
     404.html
-    icons/  ← 資料夾，裡面有 9 個 png
 
-常見的錯：
-  ✗ 只上傳了 index.html          → 圖示變成綠底白字的「3」
-  ✗ 多包了一層資料夾              → 網址變成 /321leviticus/321leviticus/
-  ✗ icons 資料夾沒跟著上去        → 開場畫面出現破圖
+如果你之前已經傳過那 9 個 png（它們本來就在根目錄），
+那其實**只要換掉三個檔**就好：
+    index.html
+    manifest.webmanifest
+    sw.js
 
-上傳完怎麼確認（最快的一招）：
-  用 Safari 直接開這個網址 ——
-      <你的網址>/icons/icon-180.png
-  看得到那張金色的 321 圖就對了；出現 404 就是 icons 沒上去。
+上傳完怎麼確認：
+  用 Safari 開  <你的網址>/icon-180.png
+  看得到金色的 321 圖就對了。
 
 iPhone 加到主畫面：
-  iOS 是**按網址快取圖示**的，重整沒有用。
+  iOS 是按網址快取圖示的，重整沒有用。
   請先把舊的主畫面捷徑長按刪掉，再重新「加入主畫面」一次。
 
-注意：.nojekyll 是隱藏檔，解壓縮後可能看不見。
-Mac 按 Cmd+Shift+. 可以顯示隱藏檔。這個檔一定要上傳。
+注意：.nojekyll 是隱藏檔，解壓後可能看不見。
+Mac 按 Cmd+Shift+. 可以顯示隱藏檔。
